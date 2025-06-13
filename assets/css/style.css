@@ -1,0 +1,5 @@
+body { font-family: Georgia, serif; background:#faf6ef; color:#222; margin:0; padding:1rem; }
+a { color:#064; text-decoration:none; }
+.pattern { border-bottom:1px solid #ddd; padding:1rem 0; }
+.pattern img { max-width:200px; float:left; margin-right:1rem; }
+.badge { display:inline-block; border:1px solid currentColor; padding:0.25em 0.5em; font-size:0.8em; }

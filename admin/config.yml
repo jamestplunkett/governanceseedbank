@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "assets/img"
+public_folder: "/assets/img"
+collections:
+  - name: "patterns"
+    label: "Patterns"
+    folder: "patterns"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Status", name: "status", widget: "select", options: ["Proven", "Emerging", "Speculative"] }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Essence", name: "essence", widget: "text" }
+      - { label: "Illustration", name: "illustration", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }

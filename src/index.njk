@@ -1,0 +1,24 @@
+---
+title: Home
+layout: base.njk
+---
+<h1>{{ site.title }}</h1>
+<p>{{ site.tagline }}</p>
+<input id="searchBox" placeholder="Search patterns…">
+<div id="tagFilters">
+  {% for tag in collections.patternTags %}
+    <button class="tagBtn" data-tag="{{ tag }}">{{ tag }}</button>
+  {% endfor %}
+</div>
+<div id="patterns">
+  {% for pattern in collections.patterns %}
+    <article class="pattern" data-tags="{{ pattern.data.tags | join(',') }}">
+      <img src="{{ pattern.data.illustration }}" alt="{{ pattern.data.title }} illustration">
+      <h2><a href="{{ pattern.url }}">{{ pattern.data.title }}</a></h2>
+      <p>{{ pattern.data.essence }}</p>
+      <span class="badge">{{ pattern.data.status }}</span>
+      <div style="clear:both;"></div>
+    </article>
+  {% endfor %}
+</div>
+<script src="/js/search.js"></script>
